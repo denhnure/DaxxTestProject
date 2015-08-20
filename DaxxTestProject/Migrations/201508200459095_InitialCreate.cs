@@ -40,7 +40,7 @@ namespace DaxxTestProject.Migrations
                         StateId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Country", t => t.CountryId, cascadeDelete: true)
+                .ForeignKey("dbo.Country", t => t.CountryId)
                 .ForeignKey("dbo.State", t => t.StateId, cascadeDelete: true)
                 .Index(t => t.CountryId)
                 .Index(t => t.StateId);
