@@ -24,17 +24,10 @@ namespace DaxxTestProject.Controllers
             return db.States;
         }
 
-        // GET api/States/5
-        [ResponseType(typeof(State))]
-        public async Task<IHttpActionResult> GetState(int id)
+        [HttpGet]
+        public IQueryable<State> GetState(int id)
         {
-            State state = await db.States.FindAsync(id);
-            if (state == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(state);
+            return db.States.Where(state => state.CountryId == id);
         }
 
         // PUT api/States/5
