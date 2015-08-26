@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="password">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" name="password" class="form-control" ng-model="Password" pattern="(\d.*?[a-z])|([a-z].*?\d)" required>
+                    <input type="password" name="password" class="form-control" ng-model="Password" pattern="(\d.*?[A-Z])|([A-Z].*?\d)" required>
                     <p ng-show="step1Form.password.$invalid && step1Form.$submitted" class="help-block">Password must contain min 1 digit and min 1 uppercase letter</p>
                 </div>
             </div>
